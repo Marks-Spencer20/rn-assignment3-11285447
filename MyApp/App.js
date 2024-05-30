@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { View, Text, ScrollView, TextInput, StyleSheet, Button, FlatList } from 'react-native';
+import { View, Text, ScrollView, TextInput, StyleSheet, Button, FlatList, Image } from 'react-native';
 import CategoryItem from './components/CategoryItem';
 import TaskItem from './components/TaskItem';
+import profile from './profile.png'
 
 const categories = [
   { name: 'Exercise', icon: './pic1.png' },
   { name: 'Study', icon: './exercise.png' },
-  { name: 'Code', icon: 'https://via.placeholder.com/50' },
+  { name: 'Code', icon: './' },
   { name: 'Cook', icon: 'https://via.placeholder.com/50' },
   { name: 'Read', icon: 'https://via.placeholder.com/50' },
   { name: 'Travel', icon: 'https://via.placeholder.com/50' },
@@ -37,7 +38,7 @@ const App = () => {
       <View style={styles.first}>
       <Text style={styles.title}>Hello, Spencer</Text>
       <Text>10 tasks today</Text>
-      </View>
+     </View>
       <Text style={styles.subtitle}>Categories</Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.categoryContainer}>
         {categories.map((category, index) => (
@@ -68,6 +69,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   first: {
+    flex: 1,
+    padding: 20,
     backgroundColor: 'border: Mixed solid rgba(251, 249, 247, 1)',
   },
   title: {
