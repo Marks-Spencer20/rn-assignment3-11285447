@@ -14,9 +14,16 @@ const styles = StyleSheet.create({
     padding: 10,
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
+    backgroundColor: '#ffff',
+    marginBottom: 15,
+    borderRadius: 14,
   },
   text: {
     fontSize: 16,
+    width: 354,
+    height: 128,
+    padding: 50,
+    fontWeight: '700'
   },
 });
 

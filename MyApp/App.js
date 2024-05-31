@@ -7,12 +7,12 @@ import profile from './profile.png'
 const categories = [
   { name: 'Exercise', icon: './pic1.png' },
   { name: 'Study', icon: './exercise.png' },
-  { name: 'Code', icon: './' },
-  { name: 'Cook', icon: 'https://via.placeholder.com/50' },
-  { name: 'Read', icon: 'https://via.placeholder.com/50' },
-  { name: 'Travel', icon: 'https://via.placeholder.com/50' },
-  { name: 'Meditate', icon: 'https://via.placeholder.com/50' },
-  { name: 'Play', icon: 'https://via.placeholder.com/50' },
+  { name: 'Code', icon: './code.png' },
+  { name: 'Cook', icon: './cook.png' },
+  { name: 'Read', icon: './read.png' },
+  { name: 'Travel', icon: './travel.png' },
+  { name: 'Meditate', icon: './meditate.png' },
+  { name: 'Play', icon: './play.png' },
 ];
 
 const initialTasks = [
@@ -36,8 +36,15 @@ const App = () => {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.first}>
-      <Text style={styles.title}>Hello, Spencer</Text>
+     <View style={styles.container1}>
+     <Text style={styles.title}>Hello, Spencer</Text>
       <Text>10 tasks today</Text>
+     </View>
+      <View style={styles.profilePic}>
+        <View style={styles.eclipse}>
+
+        </View>
+      </View>
      </View>
       <Text style={styles.subtitle}>Categories</Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.categoryContainer}>
@@ -66,18 +73,30 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#fff',
+    backgroundColor: '#f7f0e8',
+  },
+  eclipse: {
+    backgroundColor: 'blue', 
+    width: 50,
+    height: 52,
+    borderRadius: 25,
   },
   first: {
-    flex: 1,
-    padding: 20,
-    backgroundColor: 'border: Mixed solid rgba(251, 249, 247, 1)',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    backgroundColor: '',
   },
+  profilePic: {
+    backgroundColor: 'red',
+    width: 50,
+    height: 52,
+  },
+  
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: -5,
-    backgroundColor: 'border: Mixed solid rgba(251, 249, 247, 1)',
+    backgroundColor: '',
   },
   subtitle: {
     fontSize: 20,
