@@ -36,12 +36,12 @@ const App = () => {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.first}>
-     <View style={styles.container1}>
-     <Text style={styles.title}>Hello, Spencer</Text>
-      <Text>14 tasks today</Text>
-     </View>
+        <View>
+          <Text style={styles.title}>Hello, Spencer</Text>
+          <Text>14 tasks today</Text>
+        </View>
       <View style={styles.profilePic}>
-        <View style={styles.eclipse}>
+        <View>
             <Image source={require('./assets/person.png')} style={styles.person} />
         </View>
       </View>
@@ -57,6 +57,7 @@ const App = () => {
         <Image source={require('./assets/Vector.png')} style={styles.filterpic}/>
       </View>
      </View>
+     
       <Text style={styles.subtitle}>Categories</Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.categoryContainer}>
         {categories.map((category, index) => (
@@ -86,12 +87,6 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: '#f7f0e8',
   },
-  eclipse: {
-    backgroundColor: '', 
-    width: 50,
-    height: 52,
-    borderRadius: 25,
-  },
   person: {
     width: 46,
     height: 45,
@@ -101,10 +96,8 @@ const styles = StyleSheet.create({
   first: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    backgroundColor: '',
   },
   profilePic: {
-    backgroundColor: '',
     width: 50,
     height: 52,
   },
@@ -124,7 +117,7 @@ const styles = StyleSheet.create({
   },
   search1: {
     height: 24,
-    width: 82,
+    width: 280,
     marginTop: 12,
     marginLeft: 10,
     flexDirection: 'row',
